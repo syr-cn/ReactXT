@@ -1,0 +1,6 @@
+STOUT-pypi
+pubchempy
+pandas
+rdkit
+paragraph2actions
+python-Levenshtein
