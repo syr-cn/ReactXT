@@ -61,7 +61,7 @@ bash scripts/run_retro.sh
 
 If you find this paper useful, please cite us:
 
-```latex
+```bib
 @inproceedings{liu2024reactxt,
     title={ReactXT: Understanding Molecular “Reaction-ship” via Reaction-Contextualized Molecule-Text Pretraining},
     author={Liu, Zhiyuan and Shi, Yaorui and Zhang, An and Li, Sihang and Zhang, Enzhi and Wang, Xiang and Kawaguchi, Kenji and Chua, Tat-Seng},
