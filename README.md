@@ -138,7 +138,7 @@ If you find this paper useful, please cite us:
 @inproceedings{liu2024reactxt,
     title={ReactXT: Understanding Molecular “Reaction-ship” via Reaction-Contextualized Molecule-Text Pretraining},
     author={Liu, Zhiyuan and Shi, Yaorui and Zhang, An and Li, Sihang and Zhang, Enzhi and Wang, Xiang and Kawaguchi, Kenji and Chua, Tat-Seng},
-    booktitle={{ACL}},
+    booktitle={Findings of the Association for Computational Linguistics: {ACL} 2024},
     publisher={Association for Computational Linguistics},
     year={2024},
     url={https://openreview.net/forum?id=V-ejDfLiwe}
