@@ -1,7 +1,8 @@
 # ReactXT: Understanding Molecular “Reaction-ship” via Reaction-Contextualized Molecule-Text Pretraining
 
 This repo contains the pytorch implementation of our ACL 2024 paper.
-[paper](https://www.arxiv.org/abs/2405.14225), [Homepage](https://syr-cn.github.io/ReactXT/), [Demo](xxx)
+
+[[paper](https://www.arxiv.org/abs/2405.14225)], [[Homepage](https://syr-cn.github.io/ReactXT/)], Demo
 
 Authors: Zhiyuan Liu*, Yaorui Shi*, An Zhang, Sihang Li, Enzhi Zhang, Xiang Wang†, Kenji Kawaguchi, Tat-Seng Chua
 
@@ -13,7 +14,7 @@ Authors: Zhiyuan Liu*, Yaorui Shi*, An Zhang, Sihang Li, Enzhi Zhang, Xiang Wang
 
 ![fig1](./figures/frameworks.jpg)
 
-We propose *React*ion-Conte*xt*ualized Molecule-Text Pretraining (ReactXT), a new pretraining method for reaction-text modeling.
+We propose **React**ion-Conte**xt**ualized Molecule-Text Pretraining (ReactXT), a new pretraining method for reaction-text modeling.
 - ReactXT incorporates chemical reactions, instead of only single molecules, into the pretraining process.
 - ReactXT is good at both reaction-text generation and molecule-text generation downstream tasks.
 
@@ -22,8 +23,8 @@ We propose *React*ion-Conte*xt*ualized Molecule-Text Pretraining (ReactXT), a ne
 
 ReactXT aims to improve React-Text modeling by introducing three types of input contexts.
 - **Forward reaction**: The forward reaction context contains molecule roles (Reactant/Catalyst/Solvent/Product), molecule SMILES, and 2D molecular graph embeddings.
-- **Backward reaction**: Similar to the forward context but with the order of molecular roles reversed. Suppose the forward context prediction trains the model to predict the product from the reactants, then the backward context prediction train the model to predict the reactant from the product.
-- **Random molecule**: A small amount of random molecules are also included to ensure the LM retains the capability to describe individual molecules outside chemical reactions
+- **Backward reaction**: Similar to the forward context but with the order of molecular roles reversed. Suppose the forward context prediction trains the model to predict the product from the reactants, then the backward context prediction trains the model to predict the reactant from the product.
+- **Random molecule**: A small amount of random molecules are also included to ensure the LM retains the capability to describe individual molecules outside chemical reactions.
 
 
 ## Comparison to previous molecule-text generative modeling methods
@@ -90,7 +91,7 @@ This script uses both the reaction context and single molecule captioning to tra
 bash scripts/run_pretrain.sh
 ```
 
-After the pretraining step, the model will be saved in `./all_checkpoints/` directory. You may use the `convert.py` to combine the model checkpoints. 
+After the pretraining step, the model will be saved in the `./all_checkpoints/` directory. You may use the `convert.py` to combine the model checkpoints. 
 
 ### Finetuning on downstream tasks
 

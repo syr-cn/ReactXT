@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Welcome to the homepage of ReactXT">
+  <meta name="keywords" content="Chemical Reactions, Experimental procedure prediction, Large Language Models, AI for Science">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReactXT: Understanding Molecular “Reaction-ship” via Reaction-Contextualized Molecule-Text Pretraining</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <link rel="stylesheet" href="./static/css/index-gradio.css">
+  <link rel="stylesheet" href="./static/css/live_theme.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"
+              style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-bottom: 5px;">ReactXT:</h1>
+          <h1 class="title is-2 publication-title">Understanding Molecular “Reaction-ship” via Reaction-Contextualized Molecule-Text Pretraining</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://acharkq.github.io/">Zhiyuan Liu</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              Yaorui Shi<sup>2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://anzhang314.github.io/">An Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Sihang Li<sup>2</sup>,</span>
+            <span class="author-block">
+              Enzhi Zhang<sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://xiangwang1223.github.io/">Xiang Wang</a><sup>2†</sup>,</span>
+            <span class="author-block">
+              Kenji Kawaguchi<sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.chuatatseng.com/">Tat-Seng Chua</a><sup>1</sup>,</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>National University of Singapore</span>
+            <br>
+            <span class="author-block"><sup>2</sup>University of Science and Technology of China</span>
+            <span class="author-block"><sup>3</sup>Hokkaido University</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="font-size: 15px;"><sup>*</sup>Equal Contribution</span>
+            <span class="author-block" style="font-size: 15px;"><sup>†</sup>Correspondence</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2405.14225"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/syr-cn/ReactXT"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/syr-cn/ReactXT"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-laugh-wink"></i>
+                  </span>
+                  <span>Demo</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Molecule-text modeling, which aims to facilitate molecule-relevant tasks with a textual interface and textual knowledge, is an emerging research direction. Beyond single molecules, studying reaction-text modeling holds promise for helping the synthesis of new materials and drugs. However, previous works mostly neglect reaction-text modeling: they primarily focus on modeling individual molecule-text pairs or learning chemical reactions without texts in context. Additionally, one key task of reaction-text modeling -- experimental procedure prediction -- is less explored due to the absence of an open-source dataset. The task is to predict step-by-step actions of conducting chemical experiments and is crucial to automating chemical synthesis.
+          </p>
+          <p>
+            To resolve the challenges above, we propose a new pretraining method, <b>ReactXT</b>, for reaction-text modeling, and a new dataset, <b>OpenExp</b>, for experimental procedure prediction. Specifically, ReactXT features three types of input contexts to incrementally pretrain LMs. Each of the three input contexts corresponds to a pretraining task to improve the text-based understanding of either reactions or single molecules. ReactXT demonstrates consistent improvements in experimental procedure prediction and molecule captioning and offers competitive results in retrosynthesis.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <br>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+
+    <!-- Framework. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2">Framework</h2>
+
+        <!-- Pretraining. -->
+        <h3 class="title is-4">Reaction-Contextualized Molecule-Text Pretraining</h3>
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+              <div class="content has-text-justified">
+                  <img class="columns is-centered has-text-centered framework" src="./static/images/frameworks.jpg" alt="Teaser" width="100%"
+                       style="margin:0 auto">
+                  <br>
+                  <p>
+                    We propose <u>React</u>ion-Conte<u>xt</u>ualized Molecule-Text Pretraining (<b>ReactXT</b>), a new pretraining method for reaction-text modeling.
+                    <ul>
+                    <li>
+                      ReactXT incorporates <b>chemical reactions</b>, instead of only single molecules, into the pretraining process.
+                    </li>
+                    <li>
+                      ReactXT is good at both <b>reaction-text</b> generation and <b>molecule-text</b> generation downstream tasks.
+                    </li>
+                    </ul>
+                  </p>
+              </div>
+  
+          </div>
+      </div>
+      <!--/ Pretraining. -->
+
+      <!-- Context. -->
+      <h3 class="title is-4">Context</h3>
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+            <div class="content has-text-justified">
+                <img class="columns is-centered has-text-centered framework" src="./static/images/context.jpg" alt="Teaser" width="100%"
+                    style="margin:0 auto">
+                <br>
+                <p>
+                  ReactXT aims to improve React-Text modeling by introducing three types of input contexts.
+                  <ul>
+                  <li>
+                    <b>Forward reaction</b>: The forward reaction context contains molecule roles (Reactant/Catalyst/Solvent/Product), molecule SMILES, and 2D molecular graph embeddings.
+                  </li>
+                  <li>
+                    <b>Backward reaction</b>: Similar to the forward context but with the order of molecular roles reversed. Suppose the forward context prediction trains the model to predict the product from the reactants, then the backward context prediction trains the model to predict the reactant from the product.
+                  </li>
+                  <li>
+                    <b>Random molecule</b>: A small amount of random molecules are also included to ensure the LM retains the capability to describe individual molecules outside chemical reactions.
+                  </li>
+                  </ul>
+                </p>
+            </div>
+
+        </div>
+      </div>
+      <!--/ Context. -->
+      </div>
+    </div>
+    <!--/ Framework. -->
+
+  </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+
+    <!-- OpenExp. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2">OpenExp</h2>
+
+        <div class="content has-text-justified">
+            <img class="columns is-centered has-text-centered framework" src="./static/images/openexp.jpg" alt="Teaser" width="100%"
+                style="margin:0 auto">
+            <br>
+            <p>
+              We collected 2.2M chemical reactions and associated experiment procedures from the USPTO dataset and the Open Reaction Database. The data are then undergone the following steps to form the OpenExp dataset.
+              <ul>
+              <li>
+                <b>Tranlation</b>: We apply pretrained LM to translate the unstructured experiment procedure records into structured descriptions.
+              </li>
+              <li>
+                <b>NER</b>: We perform named entity recognition to extract the chemical materials from the structured descriptions.
+              </li>
+              <li>
+                <b>Filtering</b>: Some invalid samples are filtered out. More details are in Table 3 of our paper.
+              </li>
+              </ul>
+            </p>
+        </div>
+
+      </div>
+    </div>
+    <!--/ OpenExp. -->
+
+  </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Related Links. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            This work uses <a href="https://arxiv.org/pdf/2310.12798">MolCA</a> and <a href="https://arxiv.org/pdf/2211.09085">Galactica</a> as the backbone molecule-text language models.
+          </p>
+          <p>
+            The processing of OpenExp is inspired by <a href="https://www.nature.com/articles/s41467-021-22951-1">smiles2actions</a> and <a href="https://www.nature.com/articles/s41467-020-17266-6">paragraph2actions</a>. The original data come from <a href="https://figshare.com/articles/dataset/Chemical_reactions_from_US_patents_1976-Sep2016_/5104873">USPTO</a> and <a href="https://open-reaction-database.org/">ORD</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Links. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <pre><code>@inproceedings{liu2024reactxt,
+      title={ReactXT: Understanding Molecular “Reaction-ship” via Reaction-Contextualized Molecule-Text Pretraining},
+      author={Liu, Zhiyuan and Shi, Yaorui and Zhang, An and Li, Sihang and Zhang, Enzhi and Wang, Xiang and Kawaguchi, Kenji and Chua, Tat-Seng},
+      booktitle={Findings of the Association for Computational Linguistics: {ACL} 2024},
+      publisher={Association for Computational Linguistics},
+      year={2024},
+      url={https://openreview.net/forum?id=V-ejDfLiwe}
+  }</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+      <div class="columns is-centered">
+          <div class="column is-8">
+              <div class="content">
+                  <p style="text-align: center;">
+                      The webpage is built based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+</body>
+</html>
