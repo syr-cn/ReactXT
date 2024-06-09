@@ -1,0 +1,14 @@
+rdkit
+ogb
+torch
+pytorch_lightning
+torch_geometric
+transformers
+flash_attn
+peft
+nltk
+rouge_score
+salesforce-lavis
+textdistance
+gradio
+torch_ema

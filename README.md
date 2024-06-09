@@ -37,10 +37,12 @@ In contrast, ReactXT integrates **both molecule-text and reaction contexts** int
 
 ## Requirements
 
-Our environment is detailed in `environment.yml`. To create a new environment `reactxt`, run the following command:
+The requirements of this repo are detailed in `requirements.txt`. To create a new environment `reactxt`, run the following command:
 
 ```bash
-conda env create -f environment.yml
+conda create -n reactxt python=3.8
+conda activate reactxt
+pip install -r requirements.txt
 ```
 
 ## Reproduce the results
