@@ -2,7 +2,7 @@
 
 This repo contains the pytorch implementation of our ACL 2024 paper.
 
-[[paper](https://www.arxiv.org/abs/2405.14225)], [[Homepage](https://syr-cn.github.io/ReactXT/)], [[Demo](https://587c2df8dd6e3edd53.gradio.live/)]
+[[paper](https://www.arxiv.org/abs/2405.14225)], [[Homepage](https://syr-cn.github.io/ReactXT/)], [[Demo](https://huggingface.co/spaces/yrshi/ReactXT)]
 
 Authors: Zhiyuan Liu*, Yaorui Shi*, An Zhang, Sihang Li, Enzhi Zhang, Xiang Wang†, Kenji Kawaguchi, Tat-Seng Chua
 
