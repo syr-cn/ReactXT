@@ -47,7 +47,7 @@ pip install -r requirements.txt
 
 ## Reproduce the results
 
-Our datasets and pretrained model checkpoints can be downloaded from [here](https://osf.io/e68v4/files/osfstorage).
+Our datasets and model checkpoints can be downloaded from [here](https://osf.io/e68v4/files/osfstorage).
 
 The datasets should be placed in the `./data/` directory, and the pretrained model checkpoints should be placed in the `./all_checkpoints/` directory. If done correctly, the folders may look like this:
 ```
